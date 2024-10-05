@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <!-- Snake Game -->
+        <div class="game-container snake-game">
+            <h1>Snake Game</h1>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="score">Score: <span id="score">0</span></div>
+            <div id="gameOverMessage"></div>
+        </div>
+
+        <!-- Tic Tac Toe -->
+        <div class="game-container tic-tac-toe">
+            <h1>Tic-Tac-Toe</h1>
+            <div id="gameStatus">Player X's Turn</div>
+            <div class="grid">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+            <button id="restartButton">Restart Game</button>
+        </div>
+
+        <!-- Age Calculator -->
+        <div class="game-container age-calculator">
+            <h1>Age Calculator</h1>
+            <form id="ageForm">
+                <label for="birthdate">Enter your birthdate:</label>
+                <input type="date" id="birthdate" max="" required>
+                <button type="submit">Calculate Age</button>
+            </form>
+            <div class="result">
+                <p id="ageResult"></p>
+                <p id="nextBirthday"></p>
+                <div class="progress-container">
+                    <p id="yearProgress"></p>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
